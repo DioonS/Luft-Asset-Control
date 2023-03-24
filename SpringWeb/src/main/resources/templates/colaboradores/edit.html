@@ -1,0 +1,41 @@
+<div th:replace="shared/header"></div>
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-2 text-gray-800">Colaboradores</h1>
+                    <p class="mb-4">Editar Colaboradores.</p>
+
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4" style="padding: 30px">
+                        <form method="POST" th:action="@{'/administradores/' + ${administrador?.id} + '/update'}" onsubmit="return confirm('Confirma ação?')">
+                            <div class="form-group">
+                                <label for="nome">Nome</label>
+                                <input type="text" class="form-control" th:value="${administrador?.nome}" required id="nome" name="nome" placeholder="Nome e Sobrenome">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" class="form-control" th:value="${administrador?.email}" required id="email" name="email" placeholder="E-mail">
+                            </div>
+                            <div class="form-group">
+                                <label for="senha">Senha</label>
+                                <input type="password" class="form-control" th:value="${administrador?.senha}" required id="senha" name="senha" placeholder="Informe uma senha">
+                            </div>
+                            <div class="form-group">
+                                <label for="usuario">Tipo de Usuário</label>
+                                <select class="form-control" id="usuario" name="usuario">
+                                    <option value="Usuário" th:selected="${administrador.usuario == 'Usuário'}">Usuário</option>
+                                    <option value="Administrador" th:selected="${administrador.usuario == 'Administrador'}">Administrador</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="observacao">Observações</label>
+                                <textarea class="form-control" id="observacao" name="observacao" placeholder="Observações" th:inline="text">[[${administrador.observacao}]]</textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </form>
+                    </div>
+
+                </div>
+    <!-- /.container-fluid -->
+<div th:replace="shared/footer"></div>

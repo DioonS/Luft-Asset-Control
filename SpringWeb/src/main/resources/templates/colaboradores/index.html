@@ -1,0 +1,62 @@
+<div th:replace="shared/header"></div>
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-2 text-gray-800">Colaboradores</h1>
+                    <p class="mb-4">Lista dos Colaboradores.</p>
+
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <a href="administradores/new" class="btn btn-primary" style="margin-right: 20px; width: 200px;">Novo</a>
+                            <h6 class="m-0 font-weight-bold text-primary" style="display: inline-block; text-transform: uppercase;">Lista de colaboradores</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Nome</th>
+                                            <th>CPF</th>
+                                            <th>E-mail</th>
+                                            <th>Telefone</th>
+                                            <th>Setor</th>
+                                            <th>Gestor</th>
+                                            <th>Cargo/Função</th>
+                                            <th>Observações</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Nome</th>
+                                            <th>CPF</th>
+                                            <th>E-mail</th>
+                                            <th>Telefone</th>
+                                            <th>Setor</th>
+                                            <th>Gestor</th>
+                                            <th>Cargo/Função</th>
+                                            <th>Observações</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr th:each="administrador : ${administradores}">
+                                            <td th:text="${administrador.id}"></td>
+                                            <td th:text="${administrador.nome}"></td>
+                                            <td th:text="${administrador.email}"></td>
+                                            <td th:text="${administrador.usuario}"></td>
+                                            <td th:text="${administrador.observacao}"></td>
+                                            <td><a th:href="@{'/administradores/' + ${administrador.id}}" class="btn btn-warning">Alterar</a></td>
+                                            <td><a href="#" th:onclick="'if(confirm(\'Confirmar ?\')) { window.location.href = \'' + @{/administradores/{id}(id=${administrador.id})} + '/delete\'}'" class="btn btn-danger">Excluir</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+    <!-- /.container-fluid -->
+<div th:replace="shared/footer"></div>
