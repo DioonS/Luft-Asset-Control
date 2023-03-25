@@ -13,9 +13,9 @@ import java.util.List;
 @Entity
 @Table(name = "colaboradores")
 @Data
-public class Colaboradores {
+public class Colaborador {
 
-    public Colaboradores() {
+    public Colaborador() {
     }
 
     @Id
@@ -39,15 +39,15 @@ public class Colaboradores {
     @NotEmpty
     private String telefone;
 
-    @Column(name = "setor", unique = true, length = 30)
+    @Column(name = "setor", length = 30)
     @NotEmpty
     private String setor;
 
-    @Column(name = "cargo", unique = true, length = 50)
+    @Column(name = "cargo", length = 50)
     @NotEmpty
     private String cargo; // Cargo / Função do colaborador
 
-    @Column(name = "gestor", unique = true, length = 100)
+    @Column(name = "gestor", length = 100)
     @NotEmpty
     private String gestor; // Superior imediato (Gestor, Supervisor, Gerente, etc.)
 

@@ -1,6 +1,6 @@
 package com.web.luft.SpringWeb.controllers;
 
-import com.web.luft.SpringWeb.models.Colaboradores;
+import com.web.luft.SpringWeb.models.Colaborador;
 import com.web.luft.SpringWeb.repository.ColaboradoresRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,22 +20,22 @@ public class ColaboradoresController {
     private ColaboradoresRepo repo;
     @GetMapping("colaboradores")
     public String index (Model model){
-        List<Colaboradores> colabodores = (List<Colaboradores>)repo.findAll();
+        List<Colaborador> colabodores = (List<Colaborador>)repo.findAll();
         model.addAttribute("colaboradores", colabodores);
         return "colaboradores/index";
     }
 
     @GetMapping("/colaboradores/new")
-    public String index (){
+    public String newColaborador (){
         return "colaboradores/new";
     }
 
     @PostMapping("/colaboradores/create")
-    public String create (@Valid Colaboradores colaboradores, BindingResult result){
+    public String create (@Valid Colaborador colaborador, BindingResult result){
         if (result.hasErrors()) {
             return "colaboradores/new";
         }
-        repo.save(colaboradores);
+        repo.save(colaborador);
         return "redirect:/colaboradores";
     }
 
@@ -47,7 +47,7 @@ public class ColaboradoresController {
 
     @GetMapping("/colaboradores/{id}")
     public String find (@PathVariable int id, Model model){
-        Optional<Colaboradores> colaboradores = repo.findById(id);
+        Optional<Colaborador> colaboradores = repo.findById(id);
         try {
             model.addAttribute("colaboradores", colaboradores.get());
         } catch (Exception err) {
@@ -57,11 +57,11 @@ public class ColaboradoresController {
     }
 
     @PostMapping("/colaboradores/{id}/update")
-    public String update (@PathVariable int id, Colaboradores colaboradores){
+    public String update (@PathVariable int id, Colaborador colaborador){
         if(!repo.existsById(id)) {
             return "redirect:/colaboradores";
         }
-        repo.save(colaboradores);
+        repo.save(colaborador);
         return "redirect:/colaboradores";
     }
 }

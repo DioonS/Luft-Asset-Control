@@ -4,7 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="815642eb-287b-48a8-b77f-0723f13aaea1" name="Changes" comment="" />
+    <list default="true" id="815642eb-287b-48a8-b77f-0723f13aaea1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringWeb/src/main/java/com/web/luft/SpringWeb/controllers/ColaboradoresController.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringWeb/src/main/java/com/web/luft/SpringWeb/controllers/ColaboradoresController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringWeb/src/main/java/com/web/luft/SpringWeb/models/CarregadorCelular.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringWeb/src/main/java/com/web/luft/SpringWeb/models/CarregadorCelular.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringWeb/src/main/java/com/web/luft/SpringWeb/models/CarregadorNotebook.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringWeb/src/main/java/com/web/luft/SpringWeb/models/CarregadorNotebook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringWeb/src/main/java/com/web/luft/SpringWeb/models/Celular.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringWeb/src/main/java/com/web/luft/SpringWeb/models/Celular.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringWeb/src/main/java/com/web/luft/SpringWeb/models/Colaboradores.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringWeb/src/main/java/com/web/luft/SpringWeb/models/Colaborador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringWeb/src/main/java/com/web/luft/SpringWeb/models/FoneBluetooth.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringWeb/src/main/java/com/web/luft/SpringWeb/models/FoneBluetooth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringWeb/src/main/java/com/web/luft/SpringWeb/models/FoneDeOuvido.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringWeb/src/main/java/com/web/luft/SpringWeb/models/FoneDeOuvido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringWeb/src/main/java/com/web/luft/SpringWeb/models/Notebook.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringWeb/src/main/java/com/web/luft/SpringWeb/models/Notebook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringWeb/src/main/java/com/web/luft/SpringWeb/models/Relogio.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringWeb/src/main/java/com/web/luft/SpringWeb/models/Relogio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringWeb/src/main/java/com/web/luft/SpringWeb/repository/ColaboradoresRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringWeb/src/main/java/com/web/luft/SpringWeb/repository/ColaboradoresRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringWeb/src/main/resources/templates/administradores/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/SpringWeb/src/main/resources/templates/administradores/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringWeb/src/main/resources/templates/colaboradores/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/SpringWeb/src/main/resources/templates/colaboradores/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringWeb/src/main/resources/templates/colaboradores/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/SpringWeb/src/main/resources/templates/colaboradores/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringWeb/src/main/resources/templates/colaboradores/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/SpringWeb/src/main/resources/templates/colaboradores/new.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,13 +49,22 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/itzdi/--/SpringWeb/src/main/resources/templates",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "last_opened_file_path": "C:/Users/diego.dionisio/Luft-Asset-Control",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "com.obiscr.chatgpt.settings.GPT3-3.5-Turbo"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\itzdi\--\SpringWeb\src\main\resources\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\diego.dionisio\Luft-Asset-Control\SpringWeb\src\main\resources\templates\administradores" />
+      <recent name="C:\Users\diego.dionisio\Luft-Asset-Control\SpringWeb\src\main\resources\templates\colaboradores" />
+      <recent name="C:\Users\diego.dionisio\Luft-Asset-Control\SpringWeb\src\main\resources\templates\provisorio" />
+      <recent name="C:\Users\diego.dionisio\Luft-Asset-Control\SpringWeb\src\main\resources\templates" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.web.luft.SpringWeb.repository" />

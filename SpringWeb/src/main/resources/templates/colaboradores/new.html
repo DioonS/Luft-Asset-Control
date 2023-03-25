@@ -8,32 +8,41 @@
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4" style="padding: 30px">
-                        <form method="POST" action="/administradores/create" onsubmit="return validatePassword() && confirm('Confirma ação?')">
+                        <form method="POST" action="/colaboradores/create" onsubmit="return validatePassword() && confirm('Confirma ação?')">
                             <div class="form-group">
-                                <label for="nome">Nome</label>
-                                <input type="text" class="form-control" required id="nome" name="nome" placeholder="Nome e Sobrenome">
+                                <label for="nomecompleto">Nome</label>
+                                <input type="text" class="form-control" required id="nomecompleto" name="nomecompleto" placeholder="Nome e Sobrenome">
+                            </div>
+                            <div class="form-group">
+                                <label for="cpf">CPF</label>
+                                <input type="text" class="form-control" required id="cpf" name="cpf" placeholder="CPF">
                             </div>
                             <div class="form-group">
                                 <label for="email">E-mail</label>
                                 <input type="email" class="form-control" required id="email" name="email" placeholder="E-mail">
                             </div>
                             <div class="form-group">
-                                <label for="senha">Senha</label>
-                                <input type="password" class="form-control" required id="senha" name="senha" placeholder="Informe uma senha">
+                                <label for="telefone">Telefone</label>
+                                <input type="tel" class="form-control" required id="telefone" name="telefone" placeholder="Telefone">
                             </div>
                             <div class="form-group">
-                                <label for="usuario">Tipo de Usuário</label>
-                                <select class="form-control" id="usuario" name="usuario">
-                                    <option value="Usuário">Usuário</option>
-                                    <option value="Administrador">Administrador</option>
-                                </select>
+                                <label for="setor">Setor</label>
+                                <input type="text" class="form-control" required id="setor" name="setor" placeholder="Setor">
+                            </div>
+                            <div class="form-group">
+                                <label for="gestor">Gestor</label>
+                                <input type="text" class="form-control" required id="gestor" name="gestor" placeholder="Gestor">
+                            </div>
+                            <div class="form-group">
+                                <label for="cargo">Cargo/Função</label>
+                                <input type="text" class="form-control" required id="cargo" name="cargo" placeholder="Cargo/Função">
                             </div>
                             <div class="form-group">
                                 <label for="observacao">Observações</label>
                                 <textarea class="form-control" id="observacao" name="observacao" placeholder="Observações"></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary">Enviar</button>
-                            <button type="button" class="btn btn-dark" onclick="if(confirm('Deseja realmente sair?')){window.location.href='/administradores'}">Cancelar</button>
+                            <button type="button" class="btn btn-dark" onclick="if(confirm('Deseja realmente sair?')){window.location.href='/colaboradores'}">Cancelar</button>
                         </form>
                     </div>
                 </div>

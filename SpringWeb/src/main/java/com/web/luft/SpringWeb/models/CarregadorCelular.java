@@ -30,6 +30,6 @@ public class CarregadorCelular {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "colaborador_id", referencedColumnName = "id")
-    private Colaboradores colaborador;
+    private Colaborador colaborador;
 
 }

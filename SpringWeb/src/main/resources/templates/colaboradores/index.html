@@ -9,8 +9,8 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <a href="administradores/new" class="btn btn-primary" style="margin-right: 20px; width: 200px;">Novo</a>
-                            <h6 class="m-0 font-weight-bold text-primary" style="display: inline-block; text-transform: uppercase;">Lista de colaboradores</h6>
+                            <a href="colaboradores/new" class="btn btn-primary" style="margin-right: 20px; width: 200px;">Novo</a>
+                            <h6 class="m-0 font-weight-bold text-primary" style="display: inline-block; text-transform: uppercase;">Lista de colaborador</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -42,14 +42,18 @@
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        <tr th:each="administrador : ${administradores}">
-                                            <td th:text="${administrador.id}"></td>
-                                            <td th:text="${administrador.nome}"></td>
-                                            <td th:text="${administrador.email}"></td>
-                                            <td th:text="${administrador.usuario}"></td>
-                                            <td th:text="${administrador.observacao}"></td>
-                                            <td><a th:href="@{'/administradores/' + ${administrador.id}}" class="btn btn-warning">Alterar</a></td>
-                                            <td><a href="#" th:onclick="'if(confirm(\'Confirmar ?\')) { window.location.href = \'' + @{/administradores/{id}(id=${administrador.id})} + '/delete\'}'" class="btn btn-danger">Excluir</a></td>
+                                        <tr th:each="colaborador : ${colaboradores}">
+                                            <td th:text="${colaborador.id}"></td>
+                                            <td th:text="${colaborador.nomecompleto}"></td>
+                                            <td th:text="${colaborador.cpf}"></td>
+                                            <td th:text="${colaborador.email}"></td>
+                                            <td th:text="${colaborador.telefone}"></td>
+                                            <td th:text="${colaborador.setor}"></td>
+                                            <td th:text="${colaborador.gestor}"></td>
+                                            <td th:text="${colaborador.cargo}"></td>
+                                            <td th:text="${colaborador.observacao}"></td>
+                                            <td><a th:href="@{'/colaboradores/' + ${colaborador.id}}" class="btn btn-warning">Alterar</a></td>
+                                            <td><a href="#" th:onclick="'if(confirm(\'Confirmar ?\')) { window.location.href = \'' + @{/colaboradores/{id}(id=${colaborador.id})} + '/delete\'}'" class="btn btn-danger">Excluir</a></td>
                                         </tr>
                                     </tbody>
                                 </table>

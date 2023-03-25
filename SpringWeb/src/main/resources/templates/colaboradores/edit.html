@@ -3,34 +3,43 @@
     <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Colaboradores</h1>
+                    <h1 class="h3 mb-2 text-gray-800">Edição de Colaboradores</h1>
                     <p class="mb-4">Editar Colaboradores.</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4" style="padding: 30px">
-                        <form method="POST" th:action="@{'/administradores/' + ${administrador?.id} + '/update'}" onsubmit="return confirm('Confirma ação?')">
+                        <form method="POST" th:action="@{'/colaboradores/' + ${colaborador?.id} + '/update'}" onsubmit="return confirm('Confirma ação?')">
                             <div class="form-group">
-                                <label for="nome">Nome</label>
-                                <input type="text" class="form-control" th:value="${administrador?.nome}" required id="nome" name="nome" placeholder="Nome e Sobrenome">
+                                <label for="nomecompleto">Nome</label>
+                                <input type="text" class="form-control" th:value="${colaborador?.nomecompleto}" required id="nomecompleto" name="nomecompleto" placeholder="Nome e Sobrenome">
+                            </div>
+                            <div class="form-group">
+                                <label for="cpf">CPF</label>
+                                <input type="text" class="form-control" th:value="${colaborador?.cpf}" required id="cpf" name="cpf" placeholder="123.456.789/10">
                             </div>
                             <div class="form-group">
                                 <label for="email">E-mail</label>
-                                <input type="email" class="form-control" th:value="${administrador?.email}" required id="email" name="email" placeholder="E-mail">
+                                <input type="email" class="form-control" th:value="${colaborador?.email}" required id="email" name="email" placeholder="mail@mail.com.br">
                             </div>
                             <div class="form-group">
-                                <label for="senha">Senha</label>
-                                <input type="password" class="form-control" th:value="${administrador?.senha}" required id="senha" name="senha" placeholder="Informe uma senha">
+                                <label for="telefone">Telefone</label>
+                                <input type="tel" class="form-control" th:value="${colaborador?.telefone}" required id="telefone" name="telefone" placeholder="(11)91234-5678">
                             </div>
                             <div class="form-group">
-                                <label for="usuario">Tipo de Usuário</label>
-                                <select class="form-control" id="usuario" name="usuario">
-                                    <option value="Usuário" th:selected="${administrador.usuario == 'Usuário'}">Usuário</option>
-                                    <option value="Administrador" th:selected="${administrador.usuario == 'Administrador'}">Administrador</option>
-                                </select>
+                                <label for="setor">Setor</label>
+                                <input type="text" class="form-control" th:value="${colaborador?.setor}" required id="setor" name="setor" placeholder="Outbound">
+                            </div>
+                            <div class="form-group">
+                                <label for="gestor">Gestor</label>
+                                <input type="text" class="form-control" th:value="${colaborador?.gestor}" required id="gestor" name="gestor" placeholder="Luciano Luft">
+                            </div>
+                            <div class="form-group">
+                                <label for="cargo">Cargo/Função</label>
+                                <input type="text" class="form-control" th:value="${colaborador?.cargo}" required id="cargo" name="cargo" placeholder="Assistente de Operações">
                             </div>
                             <div class="form-group">
                                 <label for="observacao">Observações</label>
-                                <textarea class="form-control" id="observacao" name="observacao" placeholder="Observações" th:inline="text">[[${administrador.observacao}]]</textarea>
+                                <textarea class="form-control" id="observacao" name="observacao" placeholder="Observações" th:inline="text">[[${colaborador.observacao}]]</textarea>
                             </div>
                             <button type="submit" class="btn btn-primary">Enviar</button>
                         </form>
